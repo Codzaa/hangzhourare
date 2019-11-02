@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
+body,html{
+    height: 100%;
+    margin: 0;   
+}
+
+body{
+    background: url('../images/hangzhou3.png') no-repeat;
+    background-size:cover;
+    font-family: 'Yeon Sung', cursive;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    
+}
+
+body{
+    display: grid;
+
+    grid-auto-columns: auto;
+    grid-auto-rows: 20% 60% 20%;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer";
+}
+
+header{
+    grid-area: header;
+
+    display: grid;
+    grid-auto-columns: 100%;
+    
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+.body{
+    grid-area: body;
+
+    display: grid;
+    place-items: center;
+    font-size: 7vw;
+    
+}
+
+.footer{
+    grid-area: footer;
+
+    display: grid;
+    place-items: end center;
+    
+}
+
+header,.saying,.footer,.sta{
+    animation: entrance 1s ease-in-out forwards;
+    animation-duration: 5s;
+}
+
+@keyframes entrance{
+    from{
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.nav-container {
+    width: 1280px;
+    margin: auto;
+}
+.nav-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo {
+    text-decoration: none;
+    color:black;
+    padding-left: 10px;
+    font-size: 2em;
+}
+.tab-nav {
+    outline: none;
+    display: none;
+}
+.tab-nav-label {
+    display: none;
+    color: black;
+    font-size: 1.2em;
+}
+.tab-content {
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tab-content li {
+    display: inline-block;
+    padding-right: 10px;
+}
+.tab-content li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .nav-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .tab-nav-label {
+        display: grid;
+        cursor: pointer;
+        grid-column: 3;
+        padding-right: 10px;
+    }
+    .tab-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column: 1/4;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.4s;
+        -o-transition: all ease-in-out 0.4s;
+        -webkit-transition: all ease-in-out 0.4s;
+     }
+    .nav-checkbox input:checked ~ .tab-content {
+        max-height: 400px;
+    }
+    .tab-content li {
+        padding: 10px 0;
+    }
+}
+
+.sta{
+    margin-bottom: 20px;
+    background-color: rgb(0, 0, 0);
+    padding: 1em;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 40%;
+    text-decoration: none;
+    font-size:3vw;
+    
+}
+
