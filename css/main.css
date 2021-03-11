@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
 body,html{
     height: 100%;
-    margin: 0;   
+    margin: 0;
 }
 
 body{
@@ -14,7 +14,7 @@ a{
     text-decoration: none;
     cursor: pointer;
     font-size: 1.2em;
-    
+
 }
 
 body{
@@ -22,7 +22,7 @@ body{
 
     grid-auto-columns: auto;
     grid-auto-rows: 20% 60% 20%;
-    grid-template-areas: 
+    grid-template-areas:
     "header"
     "body"
     "footer";
@@ -33,7 +33,7 @@ header{
 
     display: grid;
     grid-auto-columns: 100%;
-    
+
 
     position: fixed;
     top: 0;
@@ -41,6 +41,10 @@ header{
     width: 100%;
 }
 
+#footer-link{
+  text-decoration: none;
+  color: black;
+}
 
 .body{
     grid-area: body;
@@ -48,7 +52,7 @@ header{
     display: grid;
     place-items: center;
     font-size: 7vw;
-    
+
 }
 
 .footer{
@@ -56,7 +60,7 @@ header{
 
     display: grid;
     place-items: end center;
-    
+
 }
 
 header,.saying,.footer,.sta{
@@ -163,6 +167,5 @@ header,.saying,.footer,.sta{
     border-radius: 40%;
     text-decoration: none;
     font-size:3vw;
-    
-}
 
+}
